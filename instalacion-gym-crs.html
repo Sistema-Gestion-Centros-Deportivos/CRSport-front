@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disponibilidad de Instalación</title>
+    <link rel="stylesheet" href="instalacion-crs.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="main-crs.html"> <div class="logo">CRSport</div>
+        </a>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar instalación..." id="search-bar">
+        </div>
+        <div class="user-options">
+            <button id="login-btn">Login</button>
+            <button id="signup-btn">Sign Up</button>
+        </div>
+    </nav>
+
+    <BR>
+    <h1 class="centrado"> GIMNASIO</h1><br>
+    <img src="imagen/gym.jpg" style="display: block; margin: 0 auto;"><br>
+    <h1 class="centrado">REALIZA TU RESERVA:</h1><br>
+
+
+    <div class="container">
+        <div class="header">
+            <div class="date-picker">
+                <label for="reserva">Fecha:</label>
+                <input type="date" id="reserva" name="reserva"><br>
+            </div>
+            <div class="calendar-controls">
+                <button id="today-btn" class="calendar-btn">HOY</button>
+                <button id="prev-btn" class="calendar-btn"></button>
+                <button id="next-btn" class="calendar-btn"></button>
+            </div>
+        </div>
+
+        <table class="availability-table">
+            <thead>
+                <tr>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="clickable">08:00</td>
+                </tr>
+                <tr>
+                    <td class="clickable">09:00</td> 
+                </tr>
+                <tr>
+                    <td class="clickable">10:00</td>
+                </tr>
+                <tr>
+                    <td class="clickable">11:00</td>
+                </tr>
+                <tr>
+                    <td class="clickable">12:00</td>
+                </tr>
+                <tr>
+                    <td class="clickable">13:00</td>
+                </tr>
+                <tr>
+                    <td class="clickable">14:00</td>
+                </tr>
+                <tr>
+                    <td class="clickable">15:00</td>
+                </tr>
+                <!-- Más filas según sea necesario -->
+            </tbody>
+        </table>
+
+        <div class="legend">
+            <p><span class="occupied"></span> Espacio ocupado</p>
+            <p><span class="game"></span> Partido</p>
+            <p><span class="your-booking"></span> Tus reservas</p>
+        </div>
+    </div>
+
+    <!-- Ventana emergente para confirmar reserva -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-text">¿Estás seguro que deseas hacer una reserva?</p>
+            <button id="confirm-btn" class="confirm-btn">Confirmar</button>
+            <button id="cancel-btn" class="cancel-btn">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="instalacion-crs.js"></script>
+</body>
+</html>
